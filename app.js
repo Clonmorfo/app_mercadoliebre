@@ -1,3 +1,13 @@
+/*Ejemplo de como poner una imagen con hiperviculo
+    <a href="https://google.com">
+        <img src="https://bit.ly/2WDMapV" width="560" alt="">
+    </a>
+
+    primero genero un anchor <a> que tiene dentro la imagen
+*/
+
+
+
 const express = require("express");
 const path = require("path");
 
