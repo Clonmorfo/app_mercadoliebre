@@ -16,11 +16,15 @@ const app = express();
 
 /*Config public*/
 app.use(express.static(path.resolve(__dirname, "public")))
+
 /* Routes */
 app.get("/", (req, res)=>{
     res.sendFile(path.resolve(__dirname, "./views/index.html"))
 })
 
+app.get("/ofertas", (req, res)=> {
+    res.sendFile(path.resolve(__dirname, "./views/ofertas.html"))
+})
 
 
 
