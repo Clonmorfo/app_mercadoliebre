@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {'title': 'login'})  %>
+
+<body>
+    <%- include('partials/header')  %>
+
+    <form class="form-box" action="/users/login" method="POST">
+        <label for="">Nombre de usuari@</label>
+        <input type="text" placeholder="clonmorfo" name="user-name" required>
+        <span class="feedback">Ingrese un nombre de usuario correcto</span>
+        <br>
+        <label for="">Contraseña</label>
+        <input type="password" placeholder="**********" name="user-password" required>
+        <span class="feedback">Ingrese contraseña correcta</span>
+        <br>
+        <button type="submit" class="login">Ingresar</button>
+    </form>
+    <%- include('partials/footer')  %>
+</body>
+</html>

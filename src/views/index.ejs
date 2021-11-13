@@ -1,59 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos a Mercado Liebre</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-rel="stylesheet" />
-    <link rel="stylesheet" href="/CSS/styles.css">
-    
-</head>
+<%- include('partials/head', {'title': 'Home'})  %>
 
 <body>
-    <header class="main-header">
-        <div class="main-header-top-bar">
-            <img class= "main-logo" src="/images/logo-mercado-liebre.svg" alt="logo MercadoLiebre">
-            <h2 class="header-text"><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</h2>
-        </div>
-
-        <a href="#" class="hamburger-btn">
-            <i class="fas fa-bars"></i>
-        </a>
-
-        <nav class="main-navbar">            
-            <ul class="left-navbar">
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Tiendas Oficiales</a></li>
-                <li><a href="#">Vender</a></li>
-                <li><a href="#">Ayuda</a></li>
-            </ul>
-            <ul class="rigth-navbar">
-                <li><a href="#">Creá tu cuenta<i class="far fa-id-card"></i></a></li>
-                <li><a href="#">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="#">Mis compras<i class="fas fa-shopping-basket"></i></a></li>
-            </ul>
-        </nav>
-
-        
-    </header>
-
+    <!-- Header -->
+    <%- include('partials/header')  %>
 
     <div>
         <img class="banner" src="/images/img-home-banner.jpg" alt="">
     </div>
+    
+   
 
     <main>       
         <header>
             <h2 class="last-visit">Basado en tu ultima visita</h2>
         </header>
-            
-        <section>    
-            <article>
-                <div>
-                    <img src="/images/img-cafetera-moulinex.jpg" alt="">
-                </div>                
+        <section  class="flex-products">            
+            <article  >
+                <img src="/images/img-cafetera-moulinex.jpg" alt="">
                 <div class="division">
                     <i class="fas fa-truck"></i>
                     <div class="price-box">
@@ -84,7 +49,7 @@ rel="stylesheet" />
                 </div>                
                 <div class="division">
                     <i class="fas fa-truck"></i>
-                    <div class="box-price">
+                    <div class="price-box">
                         <p class="prices">$70.500</p>
                         <p class="discounts">10% off</p>
                     </div>                    
@@ -105,13 +70,14 @@ rel="stylesheet" />
                     <p class="descriptions">SmartTv Samsung 43"</p>
                 </div>                
             </article>
-             
+
         </section>
 
-        <section>
-            <header>
-                <h2>Ofertas!!!</h2>
-            </header>
+        <header>
+            <h2 class="last-visit">Ofertas!!!</h2>
+        </header>
+        <section  class="flex-products">
+            
             
             <article>
                 <div>
@@ -147,7 +113,7 @@ rel="stylesheet" />
                 </div>                
                 <div class="division">
                     <i class="fas fa-truck"></i>
-                    <div class="box-price">
+                    <div class="price-box">
                         <p class="prices">$70.500</p>
                         <p class="discounts">10% off</p>
                     </div>                    
@@ -172,33 +138,7 @@ rel="stylesheet" />
         </section>
     </main>
 
-    <footer>
-
-        <div>
-            <i class="fas fa-credit-card"></i>
-            <h2>Pagá con tarjeta o en efectivo</h2>
-            <p>Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
-puntos de pago. ¡Y siempre es seguro!</p> 
-        </div>
-
-        <div>
-            <i class="fas fa-gift"></i>
-            <h2>Envío gratis desde $ 2.500</h2>
-            <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
-productos. Es un beneficio de Mercado Puntos.</p>    
-        </div>
-
-        <div>
-            <i class="fas fa-user-shield"></i>
-            <h2>Seguridad, de principio a fin</h2>
-            <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
-porque estás siempre protegid@.</p>
-        </div>
-        <div>
-            <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
-        </div>                   
-        
-    </footer>
+    <%- include("partials/footer")  %>
     
 </body>
 </html>

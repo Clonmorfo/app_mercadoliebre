@@ -1,0 +1,16 @@
+
+
+
+<% for(let i = 0;i < users.length; i++){ %>
+    <div>
+        <p>ID : <%= users[i].id %></p>
+        <p>nombre : <%= users[i].fullname %></p>
+        <img src="./images/users/<%=users[i].avatar %>" alt="">
+    </div>
+    <form action="/users/<%=users[i].id%>/delete?_method=delete" method="POST">
+        <button type="submit" > Borrar </button>
+    </form>
+    <br>
+<% } %>
+
+

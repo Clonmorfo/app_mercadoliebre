@@ -1,0 +1,45 @@
+
+
+/*Contenedor del formulario*/
+.form-box{
+    margin: auto;
+    background-color: #efd138;
+    margin-top: 20px;
+    padding: 8px;
+    box-shadow: 0px 0px 14px rgb(225 193 49);
+    border-radius: 15px;
+}
+.form-box input{
+    display: block;
+    width: 80%;
+    margin-top: 5px;
+    height: 26px;
+    border-radius: 6px;
+    border: none;
+    padding: 4px;
+}
+.form-box input:focus{
+    outline: rgb(255, 187, 0) 2px solid;
+}
+
+.form-box div {
+    margin: 10px auto;
+   
+}
+
+.checkboxes > input{
+    height: 15px;
+    display: initial;
+    width: initial;
+}
+.register-buttons{
+    text-align: center;
+}
+.register-buttons .reset:hover{
+    background-color: red;
+    color: white;
+}
+.register-buttons .submit:hover{
+    background-color: green;
+    color: white;
+}

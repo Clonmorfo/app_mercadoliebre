@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {'title': 'register'})  %>
+<body>
+    <%- include('partials/header')  %>
+    <main>
+        <form class="form-box" action="/users/register" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="">Nombre y apellido</label><br>
+                <input type="text" placeholder="Ej: Juan Salguero" name="fullname" >    
+            </div>
+
+            <div>
+                <label for="">Nombre de usuari@</label><br>
+                <input type="text" placeholder="Ej: JuanSalguero96" name="username" >
+            </div>
+
+            <div>
+                <label for="">Email</label><br>
+                <input type="email" placeholder="Ej: juansalguero@gmail.com" name="email" >    
+            </div>
+
+            <div>
+                <label for="">Fecha de Nacimiento</label><br>
+                <input type="date" name="age" >
+            </div>
+
+            <div>
+                <label for="">Domicilio</label><br>
+                <input type="text" placeholder="Ej: Calle Falsa 123" name="adress">
+            </div>
+
+            <div>
+                <label for="">Perfil del usuario</label><br>
+                <select name="usertype">
+                    <option disabled selected>Selecciona una opcion</option>
+                    <option value="comprador">Comprador</option>
+                    <option value="vendedor">Vendedor</option>
+                </select>
+                
+            </div>
+
+            <div class="checkboxes">                       
+                <label for="">Categorias de interes</label><br>
+                <input type="checkbox" name="categories" value="electro">Electro
+                <input type="checkbox" name="categories" value="moda">Moda
+                <input type="checkbox" name="categories" value="hogar">Hogar
+                <input type="checkbox" name="categories" value="jugueteria">Juguetería
+                <input type="checkbox" name="categories" value="vida-sana">Vida sana
+            </div>
+
+            <div> 
+                <label for="">Foto de usuario</label><br>
+                <input type="file" name="avatar">
+            </div>
+
+            <div>
+                <label for="">Contraseña</label><br>
+                <input type="password" name="password" placeholder="*******" >
+            </div>
+
+            <div>
+                <label for="">Confirmar contraseña</label><br>
+                <input type="password" name="passwordconfirmation" placeholder="*******"  >
+            </div>
+             <div class="register-buttons">
+                 <button class="reset" type="reset">Reiniciar formulario</button>
+                 <button class="submit" type="submit">Registrarme</button>
+             </div>           
+        </form>
+        <%- include('partials/footer')  %>
+    </main>    
+</body>
+</html>

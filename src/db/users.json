@@ -1,0 +1,46 @@
+[
+ {
+  "id": 1,
+  "fullname": "",
+  "username": "",
+  "email": "",
+  "age": "",
+  "adress": "",
+  "password": "$2a$10$E9X2tGz1.WAZ6oVSnjGJIuty7M/BzqWxPC1fkusVqw4Oi3tZha7C2",
+  "passwordconfirmation": "",
+  "avatar": "default-image.png"
+ },
+ {
+  "id": 2,
+  "fullname": "",
+  "username": "",
+  "email": "",
+  "age": "",
+  "adress": "",
+  "password": "$2a$10$5mAIGqaYo0R9rBGL4B.1peabHJR9tkG.GGR58nWGlVbWy8MJtHwxK",
+  "passwordconfirmation": "",
+  "avatar": "default-image.png"
+ },
+ {
+  "id": 3,
+  "fullname": "",
+  "username": "",
+  "email": "",
+  "age": "",
+  "adress": "",
+  "password": "$2a$10$fB6QDYMuN6LyiRb1BGe6BOgmacwCNA6AnJ3d1VsWkP4QDl1hto/iW",
+  "passwordconfirmation": "",
+  "avatar": "default-image.png"
+ },
+ {
+  "id": 4,
+  "fullname": "",
+  "username": "",
+  "email": "",
+  "age": "",
+  "adress": "",
+  "password": "$2a$10$JC.A2EoEr8/SEQgmHOralORtYkkIDxSmfNLp5bMQr.EpSxrfdwdgG",
+  "passwordconfirmation": "",
+  "avatar": "default-image.png"
+ }
+]

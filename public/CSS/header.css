@@ -1,0 +1,159 @@
+/* Header*/
+/*color del bg*/
+.main-header {
+    background-color: #EAC926;
+    padding: 10px;
+}
+/*topbar*/
+
+.main-logo{
+    max-width: 300px;
+}
+
+.main-header-top-bar .search{
+    margin: 7px;
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.main-header-top-bar h2{
+    font-size: 16px;
+}
+
+.main-header-top-bar .header-text {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/*menu desplegable*/
+#hamburguesa {
+    background-color: #03264C;
+    display: block;
+    text-align: center;
+    padding: 15px 0px;
+    border-radius: 30%;
+    max-width: 50px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+    transition-property:all ;
+    transition-duration: 0.3s;
+}
+#hamburguesa i{
+    color: white;
+    
+}
+#hamburguesa:hover{
+    background-color: #56a1f1;
+}
+/*navegador*/
+.main-header .main-navbar{
+    margin: 15px 0px;
+    justify-content: space-between;
+    display: none;
+}
+.main-navbar.active{
+    display: flex;
+}
+/*navegador izquierdo*/
+.main-header .main-navbar .left-navbar{
+    width: 50%;
+    display: block;
+}
+
+/*navegador derecho*/
+.main-header .main-navbar .rigth-navbar{   
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+/*items de las listas*/
+.main-header .main-navbar li{
+    text-align: left;
+    list-style: none;
+    padding: 3px;
+    margin: 2px;
+}
+.main-header .main-navbar a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+
+/*vista de tablet*/
+@media (min-width: 361px){
+    .main-header-top-bar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-header-top-bar .search{
+        align-items: center;
+        display: flex;
+        width: 40%;
+    }
+    .search-box{
+        width: 80%;
+    }
+    .main-header-top-bar .search input{
+        width: 100%;
+    }
+    .main-header-top-bar > div{
+        width: 50%;
+    }
+    .header-text{
+        display: none;
+    }  
+    .main-header .main-navbar .rigth-navbar {
+        flex-direction: column;
+        justify-content: space-between;
+        width: unset;
+    }   
+    #hamburguesa {
+        display: none;
+    }
+    .main-header .main-navbar{
+        display: flex;
+        justify-content: space-evenly;
+    }
+} 
+
+/*vista de pc*/
+@media (min-width: 768px){
+    .header-text{
+        display: block;
+    }
+    .main-header-top-bar > div,form{
+        align-self: center;
+        max-width: 33%;
+    }
+    .main-header .main-navbar .left-navbar{
+        display: flex;
+    }
+    .main-header .main-navbar .rigth-navbar{
+        flex-direction: row;
+        justify-content: right;
+    }
+    
+}
+/*viste de pc grande*/
+@media (min-width: 1200px){
+    .main-header-top-bar , .main-navbar{
+        margin: auto;
+        align-items: center;
+    }
+    .header-text{
+        max-width: none;
+        font-size: 18px;
+    }
+    .main-navbar li{
+        font-size: 16px;
+        margin: 0px 16px;
+        font-weight: 400;
+    }
+}
