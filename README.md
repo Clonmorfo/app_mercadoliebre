@@ -4,3 +4,6 @@
 
 
 fvcwsiygjugqrfih
+
+
+tener un boton que cambie las vistas depende del tipo de usuario que seas, si comprador o vendedor con cosas mas utiles para cada uno

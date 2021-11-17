@@ -5,34 +5,62 @@
     <%- include('partials/header')  %>
     <main>
         <form class="form-box" action="/users/register" method="POST" enctype="multipart/form-data">
+            
+                
             <div>
                 <label for="">Nombre y apellido</label><br>
-                <input type="text" placeholder="Ej: Juan Salguero" name="fullname" >    
+                <input 
+                    type="text" 
+                    placeholder="Ej: Juan Salguero" 
+                    name="fullname"
+                    class="<%= locals.errors && errors.fullname ? "error-box" : null %>"
+                    value = "<%= locals.oldData? oldData.fullname : null %>">   
+                <% if (locals.errors && errors.fullname){ %>
+                    <p><%= errors.fullname.msg%></p>
+                <% } %>
             </div>
 
             <div>
                 <label for="">Nombre de usuari@</label><br>
-                <input type="text" placeholder="Ej: JuanSalguero96" name="username" >
+                <input 
+                    type="text" 
+                    placeholder="Ej: JuanSalguero96" 
+                    name="username" 
+                    class="<%= locals.errors && errors.username ? "error-box" : null %>"
+                    value = "<%= locals.oldData? oldData.username : null %>">
+                    
+                <% if (locals.errors && errors.username){ %>
+                    <p><%= errors.username.msg%></p>
+                <% } %>
             </div>
 
             <div>
                 <label for="">Email</label><br>
-                <input type="email" placeholder="Ej: juansalguero@gmail.com" name="email" >    
+                <input 
+                    type="email" 
+                    placeholder="Ej: juansalguero@gmail.com" 
+                    name="email"
+                    class="<%= locals.errors && errors.email ? "error-box" : null %>"
+                    value = "<%= locals.oldData? oldData.email : null %>">
+                <% if (locals.errors && errors.email){ %>
+                    <p><%= errors.email.msg%></p>
+                <% } %>    
             </div>
 
             <div>
                 <label for="">Fecha de Nacimiento</label><br>
-                <input type="date" name="age" >
+                <input type="date" name="age" value ="<%= locals.oldData? oldData.age : null %>" >
+
             </div>
 
             <div>
                 <label for="">Domicilio</label><br>
-                <input type="text" placeholder="Ej: Calle Falsa 123" name="adress">
+                <input type="text" placeholder="Ej: Calle Falsa 123" name="adress" value = "<%= locals.oldData? oldData.adress : null %>">
             </div>
 
             <div>
                 <label for="">Perfil del usuario</label><br>
-                <select name="usertype">
+                <select name="usertype" value = "<%= locals.oldData? oldData.usertype : null %>">
                     <option disabled selected>Selecciona una opcion</option>
                     <option value="comprador">Comprador</option>
                     <option value="vendedor">Vendedor</option>
@@ -40,7 +68,7 @@
                 
             </div>
 
-            <div class="checkboxes">                       
+            <div class="checkboxes" >                       
                 <label for="">Categorias de interes</label><br>
                 <input type="checkbox" name="categories" value="electro">Electro
                 <input type="checkbox" name="categories" value="moda">Moda
@@ -56,12 +84,26 @@
 
             <div>
                 <label for="">Contraseña</label><br>
-                <input type="password" name="password" placeholder="*******" >
+                <input 
+                    type="password"
+                    name="password" 
+                    placeholder="*******" 
+                    class="<%= locals.errors && errors.password ? "error-box" : null %>">
+                <% if (locals.errors && errors.password){ %>
+                    <p><%= errors.password.msg%></p>
+                <% } %>
             </div>
 
             <div>
                 <label for="">Confirmar contraseña</label><br>
-                <input type="password" name="passwordconfirmation" placeholder="*******"  >
+                <input 
+                    type="password" 
+                    name="passwordconfirmation" 
+                    placeholder="*******" 
+                    class="<%= locals.errors && errors.passwordconfirmation ? "error-box" : null %>">
+                <% if (locals.errors && errors.passwordconfirmation){ %>
+                    <p><%= errors.passwordconfirmation.msg%></p>
+                <% } %>
             </div>
              <div class="register-buttons">
                  <button class="reset" type="reset">Reiniciar formulario</button>

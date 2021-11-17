@@ -1,16 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', {'title': 'register'})  %>
+<body>
+    <%- include('../partials/header')  %> 
 
-
-
-<% for(let i = 0;i < users.length; i++){ %>
-    <div>
-        <p>ID : <%= users[i].id %></p>
-        <p>nombre : <%= users[i].fullname %></p>
-        <img src="./images/users/<%=users[i].avatar %>" alt="">
-    </div>
-    <form action="/users/<%=users[i].id%>/delete?_method=delete" method="POST">
-        <button type="submit" > Borrar </button>
-    </form>
-    <br>
-<% } %>
-
+    <% for(let i = 0;i < users.length; i++){ %>
+        <div style="border: 2px black solid;">
+            <p>ID : <%= users[i].id %></p>
+            <p>nombre : <%= users[i].username %></p>
+            <img style="width: 150px;" src="./images/users/<%=users[i].avatar %>" alt="">
+        
+        <form action="/users/<%=users[i].id%>/delete?_method=delete" method="POST">
+            <button type="submit" > Borrar </button>
+        </form>
+    
+        <form action="/users/<%=users[i].id%>/update" method="GET">
+            <button type="submit" > Actualizar </button>
+        </form>
+        </div>
+        <br>
+    <% } %>
+    
+    
+        <%- include('../partials/footer')  %>
+    </main>    
+</body>
+</html>
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', {'title': 'register'})  %>
+<body>
+    <%- include('../partials/header')  %>
+    <main>
+        <form class="form-box" action="/users/:id/update?_method=PUT" method="POST" enctype="multipart/form-data">
+
+            <div>
+                <label for="">Nombre de usuari@</label><br>
+                <input type="text" value="<%= usersList[id].username %>" name="username" >
+            </div>
+
+            <div>
+                <label for="">Domicilio</label><br>
+                <input type="text" name="adress" value="<%= usersList[id].adress %>">
+            </div>
+
+            <div> 
+                <img style="width: 100px;"src="/images/users/<%= usersList[id].avatar%>" alt="" value="<%= usersList[id].avatar%>">
+                <label for="">Foto de usuario</label><br>
+                <input type="file" name="avatar">
+            </div>
+
+            <!-- esto deberia comparar la contraseña con la que esta 
+                en la BD para confirmar que sea esa la persona que quiere cambiarla
+            <div>
+                <label for="">Contraseña anterior</label><br>
+                <input type="password" name="password" placeholder="*******" >
+            </div>-->
+
+            <div>
+                <label for="">Cambiar contraseña</label><br>
+                <input type="password" name="password" >
+            </div>
+
+            <div>
+                <label for="">Confirmar contraseña</label><br>
+                <input type="password" name="passwordconfirmation" ">
+            </div>
+             <div class="register-buttons">
+                 <button class="submit" type="submit">Registrarme</button>
+             </div>           
+        </form>
+        <%- include('../partials/footer')  %>
+    </main>    
+</body>
+</html>

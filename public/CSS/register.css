@@ -35,6 +35,9 @@
 .register-buttons{
     text-align: center;
 }
+.error-box{
+    outline: red 1px solid;
+}
 .register-buttons .reset:hover{
     background-color: red;
     color: white;
