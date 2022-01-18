@@ -1,11 +1,11 @@
 /*estilos generales*/
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('css/register.css');
-@import url("css/header.css");
-@import url("css/home.css");
-@import url("css/footer.css");
-@import url("css/login.css");
+@import url('/css/register.css');
+@import url("/css/header.css");
+@import url("/css/home.css");
+@import url("/css/footer.css");
+@import url("/css/login.css");
 
 * {
     font-family:roboto ,Verdana, Geneva, Tahoma, sans-serif;
@@ -13,8 +13,6 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
-
 
 
 
