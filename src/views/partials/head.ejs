@@ -9,5 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> 
     <title> <%= title %></title>
     
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $("#hamburguesa").on("click", function() {
+
+                if ($(".main-navbar").hasClass("active")) {
+                    $(".main-navbar").removeClass("active");
+                } else {
+                    $(".main-navbar").addClass("active");
+                }
+            })
+        });
+    </script>
 </head>
