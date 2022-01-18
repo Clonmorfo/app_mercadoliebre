@@ -25,4 +25,4 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
 /* Server opening*/
-app.listen(process.env.PORT || 3000, () => console.log('Servidor funcionando en el puerto ${ PORT }'));
+app.listen(process.env.PORT || 3000, () => console.log('Servidor funcionando en el puerto 3000'));
